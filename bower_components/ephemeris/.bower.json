@@ -1,0 +1,41 @@
+{
+  "name": "ephemeris",
+  "description": "API pour récupérer les éphémérides du jour ou d'un jour de l'année.",
+  "main": [
+    "src/ephemeris.js",
+    "src/ephemeris.json"
+  ],
+  "license": "LGPL-2.0+",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "keywords": [
+    "ephemeris",
+    "ephemeride"
+  ],
+  "authors": [
+    "Théo FIDRY <theo.fidry@gmail.com>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/theofidry/ephemeris"
+  },
+  "devDependencies": {
+    "jasmine": "~2.0.1"
+  },
+  "homepage": "https://github.com/theofidry/ephemeris",
+  "_release": "9f182c261a",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "9f182c261a24e4b6e6d9ce58a7c9430fd62594fe"
+  },
+  "_source": "git://github.com/theofidry/ephemeris.git",
+  "_target": "*",
+  "_originalSource": "ephemeris",
+  "_direct": true
+}

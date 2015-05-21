@@ -1,0 +1,46 @@
+.hours{
+  color: #ffffff;
+  font-size: 4.5vw;
+  font-family: 'Nixie One', cursive;
+}
+
+.widget-clock .digital {
+  text-align: left;
+}
+
+.weatherDiv{
+  color: #ffffff;
+  font-size: 1vw;
+}
+
+.ephemeris{
+  color: #ffffff;
+  font-family: 'Nixie One', cursive;
+  font-size: 2vw;
+  text-align: right;
+}
+
+body {
+  background-color: #000000;
+}
+
+footer{
+  color: #ffffff;
+  position: absolute;
+  bottom:0;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+}
