@@ -13,23 +13,68 @@ angular
     'ngAnimate',
     'ngCookies',
     'ngResource',
-    'ngRoute',
+    'ui.router',
     'ngSanitize',
     'ngTouch',
     'weatherModule',
-    'ds.clock'
+    'ds.clock',
+    'feeds',
+    'plangular',
+    'oitozero.ngSweetAlert',
+    'firebase'
   ])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+
+  .value('firebaseUrl', 'https://bathmirror.firebaseio.com/')
+
+  .config(function ($stateProvider, $urlRouterProvider) {
+    $urlRouterProvider.otherwise('/');
+
+    $stateProvider
+
+      .state('home',{
+        url: '/',
+        views:{
+          '' : {
+            templateUrl: 'views/main.html',
+            controller : 'MainCtrl'
+          },
+          'news@home' : {
+            templateUrl : 'templates/news.tpl.html'
+          }
+        }
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
+
+      .state('home.timer',{
+        url : 'showTimer',
+        views : {
+           'timer' : {
+             templateUrl : 'templates/timer.tpl.html'
+           }
+        }
       })
-      .otherwise({
-        redirectTo: '/'
+
+      .state('home.player',{
+        url: 'showPlayer',
+        views : {
+          'player' : {
+            templateUrl: 'templates/player.tpl.html'
+          }
+        }
+      })
+
+      .state('home.notif',{
+        url : 'showNotif?type',
+        views:{
+          'randomUiView':{
+            template: ' ',
+            controller: 'NotificationCtrl'
+          }
+        }
       });
+
+
+  })
+
+  .config(function(plangularConfigProvider){
+    plangularConfigProvider.clientId = 'b6e6d860da5d8c51b280570daff42907';
   });

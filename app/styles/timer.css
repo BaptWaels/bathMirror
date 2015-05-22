@@ -1,0 +1,30 @@
+@import url(http://fonts.googleapis.com/css?family=Lekton:400,700|Play:400,700);
+
+.container-timer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  background: #3E46C3;
+  padding: 20px 30px;
+  overflow: hidden;
+}
+
+.container-timer h1 {
+  text-align: center;
+  font: 400 8.9vw/1.4 'Play';
+  color: #BCCAFF;
+  letter-spacing: 0px;
+  text-shadow: -5px 2px 3px #333;
+}
+
+.controls {
+  animation: bounceSlide .45s 1 ease-in-out;
+}
+
+@keyframes bounceSlide {
+  0% {transform: translateX(-1000px);}
+  80% {transform: translateX(150px);}
+  100% {transform: translateX(0);}
+}

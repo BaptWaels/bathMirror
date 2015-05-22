@@ -10,13 +10,19 @@
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="bower_components/angular-ui-clock/dist/angular-clock.css" />
+    <link rel="stylesheet" href="bower_components/angular-feeds/app/angular-feeds/angular-feeds.css" />
+    <link rel="stylesheet" href="bower_components/sweetalert/dist/sweetalert.css" />
     <!-- endbower -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="bower_components/weather-icons/css/weather-icons.css"/>
     <!-- endbuild -->
     <link href='http://fonts.googleapis.com/css?family=Nixie+One' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Lilita+One' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
+    <link rel="stylesheet" href="styles/timer.css">
+
+
   </head>
   <body ng-app="bathmirrorApp">
     <!--[if lt IE 7]>
@@ -25,7 +31,7 @@
 
     <!-- Add your site or application content here -->
 
-    <div ng-view=""></div>
+    <div ui-view></div>
 
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -39,9 +45,14 @@
        ga('send', 'pageview');
     </script>
 
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("feeds", "1");
+    </script>
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
-    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/es5-shim/es5-shim.js"></script>
+    <script src="bower_components/jquery/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="bower_components/angular-animate/angular-animate.js"></script>
@@ -53,15 +64,25 @@
     <script src="bower_components/moment/moment.js"></script>
     <script src="bower_components/angular-ui-clock/dist/angular-clock.js"></script>
     <script src="bower_components/ephemeris/src/ephemeris.js"></script>
+    <script src="bower_components/json3/lib/json3.min.js"></script>
+    <script src="bower_components/angular-feeds/app/angular-feeds/angular-feeds.js"></script>
+    <script src="bower_components/plangular/dist/plangular.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="bower_components/angular-sweetalert/SweetAlert.js"></script>
+    <script src="bower_components/firebase/firebase.js"></script>
+    <script src="bower_components/angularfire/dist/angularfire.js"></script>
     <!-- endbower -->
     <script src="bower_components/angular-weather-directive/src/angular-weather-directive.js"></script>
     <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/notification.js"></script>
         <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/about.js"></script>
         <script src="scripts/controllers/ephemeris.js"></script>
+        <script src="scripts/controllers/timer.js"></script>
+        <script src="scripts/filters/timecode.js"></script>
         <!-- endbuild -->
 </body>
 </html>

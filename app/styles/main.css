@@ -1,23 +1,43 @@
-.hours{
-  color: #ffffff;
-  font-size: 4.5vw;
-  font-family: 'Nixie One', cursive;
+body{
+  overflow-x: hidden;
 }
 
-.widget-clock .digital {
+.hours{
+  color: #ffffff;
+  font-family: 'Nixie One', cursive;
+  font-weight: bold;
+  font-size: 145%;
   text-align: left;
+}
+p{
+  font-size: 1.5em;
 }
 
 .weatherDiv{
   color: #ffffff;
-  font-size: 1vw;
+  font-size: 2vw;
+}
+
+.myPlayer{
+  position: fixed;
+  top: 50%;
+}
+.journalTitle{
+  text-align: center;
+  font-weight: bold;
+  font-family: FF Good Headline Pro;
+}
+
+.feed{
+  text-align: justify;
+  font-family: 'Nixie One', cursive;
+  font-size: 1em;
 }
 
 .ephemeris{
   color: #ffffff;
   font-family: 'Nixie One', cursive;
-  font-size: 2vw;
-  text-align: right;
+  font-size: 3vw;
 }
 
 body {
@@ -43,4 +63,40 @@ footer{
   .header {
     margin-bottom: 30px;
   }
+}
+
+.red {
+  color: #ff4136;
+}
+
+/*Player*/
+
+.button-transparent {
+  background-color: transparent;
+  border-radius: 0;
+  border: 1px solid transparent;
+  -webkit-transition-duration: .1s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+  -webkit-transition-property: box-shadow;
+  transition-property: box-shadow;
+}
+
+.button-transparent:focus {
+  outline: none;
+  border-color: transparent;
+}
+
+.button-transparent:active,
+.button-transparent.is-active {
+  box-shadow: none;
+  outline: none;
+  border-color: transparent;
+  box-shadow: 0 0 0px;
+}
+
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
 }

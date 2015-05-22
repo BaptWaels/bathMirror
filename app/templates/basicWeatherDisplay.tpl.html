@@ -1,6 +1,4 @@
 <div class="row">
-  <div class="col-xs-12">
-
     <weather-icon-google
       cloudiness="{{ weather.clouds }}"
       custom-size="customSize"
@@ -15,7 +13,7 @@
 
     <span style="display:inline-block; vertical-align:middle">
       <h3 ng-show="weather.temp.current">
-        Current: <span ng-bind-html="weather.temp.current | temp:2"></span>
+        <span ng-bind-html="weather.temp.current | temp:2"></span>
       </h3>
 
       min: <span ng-bind-html="weather.temp.min | temp"></span><br/>
@@ -33,5 +31,4 @@
         </h6>
       </span>
     </span>
-  </div>
 </div>

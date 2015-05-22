@@ -1,3 +1,8 @@
 dist
 .tmp
 .sass-cache
+.editorconfig
+.gitattributes
+.yo-rc.json
+bower_components
+node_modules

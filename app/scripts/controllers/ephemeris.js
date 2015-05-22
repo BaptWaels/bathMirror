@@ -9,12 +9,5 @@
  */
 angular.module('bathmirrorApp')
   .controller('EphemerisCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-
-    $scope.todayEphemeris = ephemeris.getTodayEphemeris();
-
+    $scope.todayEphemeris = ephemeris.getTodayEphemeris(); // jshint ignore:line
   });
