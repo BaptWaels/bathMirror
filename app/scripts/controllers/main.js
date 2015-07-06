@@ -17,11 +17,7 @@ angular.module('bathmirrorApp')
       });
 
 
-      $('span>:contains(°):not(:contains(rain))').not('.ng-hide').each(function(){
-        $(this).text(
-          Math.round((($(this).text().replace('°','')-32)/1.8)*10)/10+'°'
-        );
-      });
+
     };
 
     $timeout(editFeed, 2000);
